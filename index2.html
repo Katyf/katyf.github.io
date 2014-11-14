@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+	<title>Katy's About Me Page</title>
+<link href="style2.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript">
+var slideimages = new Array() // create new array to preload images
+slideimages[0] = new Image() // create new instance of image object
+slideimages[0].src = "first.jpg" // set image object src property to an image's src, preloading that image in the process
+slideimages[1] = new Image()
+slideimages[1].src = "second.jpg"
+slideimages[2] = new Image()
+slideimages[2].src = "third.jpg"
+slideimages[3] = new Image()
+slideimages[3].src = "fourth.jpg"
+
+</script>
+</head>
+
+<body>
+	<div>
+	<img id="mail" src="http://wycks.files.wordpress.com/2013/10/mail-071.gif" name="Contact">
+	<h2>Contact Me!</h2>
+</div>
+	<div class="show-description">Phone: (978)502-1692<br>
+		Email: Katy.Feng.14@gmail.com</div>
+
+	<header></header>
+	 <h1><span class="thin">Katy Feng </span>| About Me</h1>
+  <img id="me" src="https://i.imgur.com/e49lxgU.jpg">
+  <p id ="main">Hi! I'm Katy, a graphic designer and aspiring web developer. 
+  	I have a passion for art and design, but I want to learn to code so I can design websites that not only look great, but are funtional and useful too. Below is a slideshow of some of my design work.</p>
+
+    
+ <div class="slideshowTitle"></div>
+ <div class="pics">
+   <img src="first.jpg" id="slide" />
+ </div>
+<script type="text/javascript">
+
+//variable that will increment through the images
+var step=0
+
+function slideit(){
+ //if browser does not support the image object, exit.
+ if (!document.images)
+  return
+ document.getElementById('slide').src = slideimages[step].src
+ if (step<3)
+  step++
+ else
+  step=0
+ //call function "slideit()" every 2.5 seconds
+ setTimeout("slideit()",2500)
+}
+
+slideit()
+
+</script>
+<br>
+<br/>
+<p>The end!</p>
+<h1>Thank You!</h1>
+<br>
+<img id ="tri" src="triangle.jpg">
+<p class="leftAligned">this is a cool triangle design I made</p>
+</body>
+</html>
+
